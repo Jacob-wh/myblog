@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../blog/static/js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<form id="myform" action="http://localhost:8000/uploadHeadImg/" method="post" enctype="multipart/form-data">
+			<input type="file" name="headImg" />
+			<input type="text" x-webkit-speech />
+			<input type="submit" name="" id="" value="ajaxform" />
+			<button class="btn">是请求上传的按钮</button>
+		</form>
+		
+	</body>
+	<script type="text/javascript">
+		
+		$('#myform').ajaxForm(function(data){
+			console.log("直接就走这个方法了吧");
+			console.log(data);
+		});
+//		$('.btn').click(function()
+//		{
+//			console.log("hahha");
+//			var option = 
+//			{
+//	            url : "http://localhost:8000/uploadHeadImg/?userId="+4,
+//	            type : "POST",
+//	            dataType : "json",
+////	            data : $("#myform").serialize(),
+//	            success : function(data)
+//	            {   
+//	            	console.log("chenggong");
+//	            },
+//	            error: function(data) {
+//	            	console.log("shibai");
+//	            },
+//	        };
+//	        $("#myform").ajaxSubmit(option);
+//	        return false;
+//		})
+	</script>
+</html>
