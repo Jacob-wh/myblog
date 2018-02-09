@@ -18,9 +18,14 @@ from django.contrib import admin
 from blog.views import *
 
 urlpatterns = [
-    url(r'^test/$', test),
-    url(r'^adManage$', adManage),
-    url(r'^manage$', manage),
-    url(r'^$', home),
-    url(r'^admin/', admin.site.urls),
+    url(r'^base/$' , base),
+    url(r'^qqLogin/$' , qqLogin),  #第三方登陆页面
+    url(r'^login/$',login) ,   #管理员登陆页面
+    url(r'^pictures/$' , pictures),#相册页面
+    url(r'^blogDetail/$', blogDetail),  #文章的具体页面
+    url(r'^addBlog/$', addBlog),#添加博客文章页面
+    url(r'^manage/$', manage),   #管理员页面
+    url(r'^$' , home),      #主页面
+    url(r'^', error),             #404页面
+    # url(r'^admin/', admin.site.urls),#django 的主页面
 ]
