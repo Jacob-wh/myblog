@@ -18,6 +18,7 @@ from django.contrib import admin
 from blog.views import *
 
 urlpatterns = [
+	url(r'^aboutMe/$' , aboutMe),  #个人介绍页面
     url(r'^base/$' , base),
     url(r'^qqLogin/$' , qqLogin),  #第三方登陆页面
     url(r'^login/$',login) ,   #管理员登陆页面

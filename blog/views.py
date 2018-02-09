@@ -7,8 +7,6 @@ import datetime
 import sys  
 import os  
 import time  
-from pydub import AudioSegment  
-from aip import  AipSpeech
 import subprocess
 
 
@@ -45,6 +43,9 @@ def qqLogin(request):
 
 def base(request):
     return render(request , "base.html")
+	
+def aboutMe(request):
+	return render(request , "aboutMe.html");
 
 
 
