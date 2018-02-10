@@ -32,7 +32,7 @@ def pictures(request):
 
 #博客详情
 def blogDetail(request):
-    return HttpResponse("blogDetail")
+    return render(request , "blogDetail.html")
 
 def login(request):
     return HttpResponse("login")
@@ -47,10 +47,13 @@ def base(request):
 def aboutMe(request):
 	return render(request , "aboutMe.html");
 
+def live(request):
+    return render(request , "live.html");
 
 
+def studyNotes(request):
+    return render(request , "studyNotes.html");
 
-
-
-
+def messages(request):
+    return HttpResponse("留言板")
 
