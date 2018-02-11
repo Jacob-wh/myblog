@@ -28,7 +28,7 @@ def addBlog(request):
 
 #相册
 def pictures(request):
-    return HttpResponse("pictures");
+    return render(request , "pictures.html");
 
 #博客详情
 def blogDetail(request):
@@ -55,5 +55,5 @@ def studyNotes(request):
     return render(request , "studyNotes.html");
 
 def messages(request):
-    return HttpResponse("留言板")
+    return render(request , "message.html")
 
