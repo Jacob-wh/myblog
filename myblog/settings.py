@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myblog.wsgi.application'
 
+LANGUAGE_CODE = 'zh-hans'  #LANGUAGE_CODE = 'zh-hans'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

@@ -8,6 +8,11 @@ import sys
 import os  
 import time  
 import subprocess
+from PIL import Image
+import sys
+from io import TextIOBase
+from xml import dom , sax , parsers , etree
+from flask import Flask
 
 
 # Create your views here.
@@ -57,3 +62,32 @@ def studyNotes(request):
 def messages(request):
     return render(request , "message.html")
 
+
+def rootIndex(request):
+    return render(request , "index.html")
+
+def rootArticle(request):
+    return render(request , "article.html")
+
+
+def notice(request):
+    return render(request , "notice.html")
+
+def comment(request):
+    return render(request , "comment.html")
+#留言返回页面
+def flink(request):
+    return render(request , "flink.html")
+
+def loginlog(request):
+    return render(request , "loginlog.html")
+
+def manageuser(request):
+    return render(request , "manage-user.html")
+#加载随机文章在主页面上
+def loadRandomApi(request):
+    try:
+        sqlcount = "select count(*) from article";
+        sql = "select * from article order by rand() limit 10";
+    except Exception as identifier:
+        print(identifier);

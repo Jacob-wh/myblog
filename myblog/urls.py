@@ -18,7 +18,15 @@ from django.contrib import admin
 from blog.views import *
 
 urlpatterns = [
-    url(r'^messages$' , messages),
+    url(r'^loadRandomApi$' , loadRandomApi),  #加载随机文章
+    url(r'^loginlog$' , loginlog),      #访问日志
+    url(r'^manage-user$' , manageuser), #管理管理员页面
+    url(r'^flink$' , flink),            #留言页面
+    url(r'^comment$' , comment),        #评论页面
+    url(r'^notice$' , notice),          #公告页面
+    url(r'^rootArticle$' , rootArticle),    #管理文章页面
+    url(r'^rootIndex$' , rootIndex),       #管理员页面
+    url(r'^messages$' , messages),      #留言页面
     url(r'^studyNotes$' , studyNotes),#学习笔记路由
 	url(r'^aboutMe$' , aboutMe),  #个人介绍页面
     url(r'^live$' , live),        #生活笔记
@@ -29,7 +37,7 @@ urlpatterns = [
     url(r'^blogDetail$', blogDetail),  #文章的具体页面
     url(r'^addBlog$', addBlog),#添加博客文章页面
     url(r'^manage$', manage),   #管理员页面
+    url(r'^admin/', admin.site.urls),#django 的主页面
     url(r'^$' , home),      #主页面
     url(r'^', error),             #404页面
-    # url(r'^admin/', admin.site.urls),#django 的主页面
 ]
